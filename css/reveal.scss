@@ -1377,3 +1377,11 @@ html:-moz-full-screen-ancestor {
 }
 
 
+.reveal .scroll-image {
+	display: block;
+	height: 620px;
+	overflow: auto;
+	img {
+		max-height: none;
+	}
+}
