@@ -23,6 +23,14 @@
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
+		<!-- Printing and PDF exports -->
+		<script>
+		    var link = document.createElement( 'link' );
+		    link.rel = 'stylesheet';
+		    link.type = 'text/css';
+		    link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		    document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
 	</head>
 
 	<body>
@@ -682,6 +690,12 @@ grid-auto-rows: 500px;
 				<section>
 					<h3>Enabling grid support on the browser: Chrome</h3>
 					<img src="images/grid-enable-chrome.jpg" alt="Enable grid support in Chrome" />
+				</section>
+				<section>
+					<h3>Files on <a href="https://github.com/wiznia/grids" target="_blank">https://github.com/wiznia/grids</a></h3>
+					<h3>Download talk on PDF at: <a href="https://raw.githubusercontent.com/wiznia/grids/master/css-grids.pdf">https://raw.githubusercontent.com/wiznia/grids/master/css-grids.pdf</a></h3>
+					<h4>Codepen examples from this talk at: <a href="http://codepen.io/wiznia/" target="_blank">http://codepen.io/wiznia/</a></h4>
+					<h4>My Twitter: <a href="https://twitter.com/wiznia" target="_blank">@wiznia</a></h4>
 				</section>
 				<section>
 					<h1>Thank you!</h1>
