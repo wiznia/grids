@@ -72,6 +72,9 @@
 				<section>
 					<h4>Grid lines</h4>
 					<img src="images/grid-layout-2.jpg" alt="Image" />
+					<aside class="notes">
+						Grid Lines son las lineas que hacen a la grilla. Pueden ser horizontales o verticales y las podemos nombrar por su numero o su nombre.
+					</aside>
 				</section>
 				<section>
 					<h4>Grid lines (highlighted)</h4>
@@ -80,14 +83,23 @@
 				<section>
 					<h4>Grid track</h4>
 					<img src="images/grid-layout-4.jpg" alt="Image" />
+					<aside class="notes">
+						Grid Track es el espacio entre dos grid lines, horizontales o verticales.
+					</aside>
 				</section>
 				<section>
 					<h4>Grid cell</h4>
 					<img src="images/grid-layout-5.jpg" alt="Image" />
+					<aside class="notes">
+						Grid Cell es el espacio entre 4 grid lines. Es la unidad mas chica donde podemos poner contenido.
+					</aside>
 				</section>
 				<section>
 					<h4>Grid area</h4>
 					<img src="images/grid-layout-6.jpg" alt="Image" />
+					<aside class="notes">
+						Grid Area es cualquier area dentro de la grilla contenida dentro de 4 grid lines. Puede tener varias grid cells dentro.
+					</aside>
 				</section>
 				<section>
 					<section>
@@ -128,6 +140,9 @@
     font: bold 30px/1 'Montserrat', Helvetica, sans-serif;
 }
 						</code></pre>
+					</section>
+					<section>
+						<img src="images/grid-layout-3-measures.jpg" alt="Image" />
 					</section>
 					<section>
 						<h3>Defining where each content will be placed</h3><br />
@@ -209,8 +224,8 @@
 						<a href="http://codepen.io/wiznia/pen/PNmNKa" target="_blank">View on CodePen</a>
 				</section>
 				<section>
-						<h4>Grid layout without gaps:</h4>
-						<pre><code class="hljs" data-trim>
+					<h4>Grid layout without gaps:</h4>
+					<pre><code class="hljs" data-trim>
 .container {
     display: grid;
     grid-template-rows: 200px 35px 420px 35px 200px;
@@ -218,15 +233,15 @@
     margin: auto;
     max-width: 960px;
 }
-						</code></pre>
-					</section>
-					<section>
-						<img src="images/grid-layout-3.jpg" alt="Image" />
-					</section>
-					<section>
-						<h3>Setting grid layout (with gaps!)</h3><br />
-						<h4>CSS:</h4>
-						<pre><code class="hljs" data-trim>
+					</code></pre>
+				</section>
+				<section>
+					<img src="images/grid-layout-3-measures.jpg" alt="Image" />
+				</section>
+				<section>
+					<h3>Setting grid layout (with gaps!)</h3><br />
+					<h4>CSS:</h4>
+					<pre><code class="hljs" data-trim>
 .container {
     display: grid;
     grid-template-rows: 200px 420px 200px;
@@ -235,14 +250,14 @@
     margin: auto;
     max-width: 960px;
 }
-						</code></pre>
-					</section>
-					<section>
-						<img src="images/grid-layout-gaps.jpg" alt="Image" />
-					</section>
-					<section>
-						<h4>CSS:</h4>
-						<pre><code class="hljs" data-trim>
+					</code></pre>
+				</section>
+				<section>
+					<img src="images/grid-layout-gaps.jpg" alt="Image" />
+				</section>
+				<section>
+					<h4>CSS:</h4>
+					<pre><code class="hljs" data-trim>
 .header {
     grid-column: 1 / 3;
     grid-row: 1 / 2;
@@ -262,8 +277,8 @@
     grid-column: 1 / 3;
     grid-row: 3 / 4;
 }						
-						</code></pre>
-						<a href="http://codepen.io/wiznia/pen/mPmPOp" target="_blank">View on CodePen</a>
+					</code></pre>
+					<a href="http://codepen.io/wiznia/pen/mPmPOp" target="_blank">View on CodePen</a>
 				</section>
 				<section>
 						<h4>Adding the "span" keyword:</h4>
@@ -408,7 +423,7 @@ grid-auto-rows: 500px;
     display: grid;
     padding: 10px;
     grid-gap: 10px;
-    grid-template-columns: 360px 360px;
+    grid-template-columns: 50% 50%;
 }
 
 .subcontent-1 {
@@ -427,7 +442,7 @@ grid-auto-rows: 500px;
 }
 					</code></pre>
 					<aside class="notes">
-						Poner ejemplo con 1fr 1fr en vez de 360px 360px
+						Poner ejemplo con 1fr 1fr en vez de 50% 50%
 					</aside>
 					<a href="http://codepen.io/wiznia/pen/BKdvpa" target="_blank">View on CodePen</a>
 				</section>
@@ -674,10 +689,81 @@ grid-auto-rows: 500px;
 					<a href="http://www.lamondamagazine.com/en/" target="_blank"><img class="fragment" src="images/lamonda.jpg" alt="La Monda" /></a>
 				</section>
 				<section>
-					<a class="scroll-image" href="http://codepen.io/wiznia/pen/vGeqWJ" target="_blank"><img src="images/grid-mobile.jpg" alt="La Monda" /></a>
+					<a class="scroll-image" href="http://codepen.io/wiznia/pen/XdZjPK" target="_blank"><img src="images/grid-mobile.jpg" alt="La Monda" /></a>
+					<aside class="notes">
+						<pre><code class="hljs" data-trim>
+.container {
+  display: grid;
+  grid-template-rows: auto 28px auto 18px auto;
+  grid-template-columns: 100%;
+}
+
+.header-container {
+  background-color: #ff0000;
+  grid-row: 1 / 2;
+}
+
+.banner-container {
+  background-color: #00ff00;
+  grid-row: 1 / 2;
+}
+
+.content-1 {
+  grid-row: 3 / 4;
+}
+
+.content-1 article {
+  height: 242px;
+}
+
+.content-2 {
+  grid-row: 5 / 6;
+  padding-left: 35px;
+}
+
+.content-2 article {
+  height: 200px;
+}
+
+.content-1, .content-2 {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-row-gap: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    max-width: 1064px;
+    margin: auto;
+    grid-template-rows: auto auto;
+    grid-template-columns: 40% 60%;
+    grid-gap: 50px;
+  }
+  
+  .header {
+    grid-column: 1 / 3;
+  }
+  
+  .content-1 {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+  }
+  
+  .content-2 {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    grid-template-columns: 50% 50%;
+    grid-column-gap: 10px;
+    padding-left: 0;
+  }
+}						</code></pre>
+					</aside>
 				</section>
 				<section>
-					<a class="scroll-image" href="http://codepen.io/wiznia/pen/vGeqWJ" target="_blank"><img src="images/grid-desktop.jpg" alt="La Monda" /></a>
+					<a class="scroll-image" href="http://codepen.io/wiznia/pen/XdZjPK" target="_blank"><img src="images/grid-desktop.jpg" alt="La Monda" /></a>
+					<aside class="notes">
+						http://codepen.io/wiznia/pen/vGeqWJ
+					</aside>
 				</section>
 				<section>
 					<h3>Grid support: not much...for now!</h3>
@@ -693,7 +779,7 @@ grid-auto-rows: 500px;
 				</section>
 				<section>
 					<h3>Files on <a href="https://github.com/wiznia/grids" target="_blank">https://github.com/wiznia/grids</a></h3>
-					<h3>Download talk on PDF at: <a href="https://raw.githubusercontent.com/wiznia/grids/master/css-grids.pdf">https://raw.githubusercontent.com/wiznia/grids/master/css-grids.pdf</a></h3>
+					<h3>Download talk on PDF at: <a href="https://github.com/wiznia/grids/blob/master/css-grids.pdf">https://raw.githubusercontent.com/wiznia/grids/master/css-grids.pdf</a></h3>
 					<h4>Codepen examples from this talk at: <a href="http://codepen.io/wiznia/" target="_blank">http://codepen.io/wiznia/</a></h4>
 					<h4>My Twitter: <a href="https://twitter.com/wiznia" target="_blank">@wiznia</a></h4>
 				</section>
