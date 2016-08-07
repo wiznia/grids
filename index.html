@@ -399,6 +399,22 @@ grid-auto-rows: 500px;
 					</aside>
 				</section>
 				<section>
+					<h2>Grid auto rows/columns</h2>
+					<pre><code class="hljs" data-trim>
+.container {
+    display: grid;
+    grid-template-rows: [row] 200px [row] 420px [row] 200px [row];
+    grid-template-columns: [col] 740px [col] 185px;
+    grid-gap: 35px;
+    grid-auto-rows: 500px;
+    grid-auto-columns: 200px; 
+    margin: auto;
+    max-width: 960px;
+}
+					</code></pre>
+					<a href="http://codepen.io/wiznia/pen/eZWaGO" target="_blank">View on CodePen</a>
+				</section>
+				<section>
 					<h2>Nested Grids</h2>
 					<h4>HTML:</h4>
 						<pre><code class="hljs" data-trim>
@@ -423,7 +439,7 @@ grid-auto-rows: 500px;
     display: grid;
     padding: 10px;
     grid-gap: 10px;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr;
 }
 
 .subcontent-1 {
@@ -441,26 +457,7 @@ grid-auto-rows: 500px;
     grid-row: 2;
 }
 					</code></pre>
-					<aside class="notes">
-						Poner ejemplo con 1fr 1fr en vez de 50% 50%
-					</aside>
 					<a href="http://codepen.io/wiznia/pen/BKdvpa" target="_blank">View on CodePen</a>
-				</section>
-				<section>
-					<h2>Grid auto rows/columns</h2>
-					<pre><code class="hljs" data-trim>
-.container {
-    display: grid;
-    grid-template-rows: [row] 200px [row] 420px [row] 200px [row];
-    grid-template-columns:	 [col] 740px [col] 185px;
-    grid-gap: 35px;
-    grid-auto-rows: 500px;
-    grid-auto-columns: 200px; 
-    margin: auto;
-    max-width: 960px;
-}
-					</code></pre>
-					<a href="http://codepen.io/wiznia/pen/eZWaGO" target="_blank">View on CodePen</a>
 				</section>
 				<section>
 					<h2>Grid areas</h2>
