@@ -46,7 +46,7 @@
 				<section>
 					<img style="background: transparent;border: 0;" src="images/me.png" alt="Me" />
 					<h2>Hello!</h2>
-					<p class="fragment">- I'm a frontend developer currently working at R/GA, Buenos Aires</p>
+					<p class="fragment">- I'm a frontend developer currently working at Softvision, Buenos Aires</p>
 					<p class="fragment">- I've been working on the web since the marvelous Flash years</p>
 					<p class="fragment">- I survived the table layout...</p>
 					<p class="fragment">- Embraced the new div way to build websites...</p>
@@ -73,7 +73,7 @@
 					<h4>Grid lines</h4>
 					<img src="images/grid-layout-2.jpg" alt="Image" />
 					<aside class="notes">
-						Grid Lines son las lineas que hacen a la grilla. Pueden ser horizontales o verticales y las podemos nombrar por su numero o su nombre.
+            Grid lines are the lines that make the grid. They can be horizontals or verticals and we can call them by name or number.
 					</aside>
 				</section>
 				<section>
@@ -84,21 +84,21 @@
 					<h4>Grid track</h4>
 					<img src="images/grid-layout-4.jpg" alt="Image" />
 					<aside class="notes">
-						Grid Track es el espacio entre dos grid lines, horizontales o verticales.
+            Grid Track is the space between two grid lines, horizontal or vertical.
 					</aside>
 				</section>
 				<section>
 					<h4>Grid cell</h4>
 					<img src="images/grid-layout-5.jpg" alt="Image" />
 					<aside class="notes">
-						Grid Cell es el espacio entre 4 grid lines. Es la unidad mas chica donde podemos poner contenido.
+            Grid Cell is the space between 4 grid lines. Is the smallest unit in which we can place content.
 					</aside>
 				</section>
 				<section>
 					<h4>Grid area</h4>
 					<img src="images/grid-layout-6.jpg" alt="Image" />
 					<aside class="notes">
-						Grid Area es cualquier area dentro de la grilla contenida dentro de 4 grid lines. Puede tener varias grid cells dentro.
+            Grid Area is any area inside the grid that's contained between 4 grid lines. It can have multiple grid cells inside.
 					</aside>
 				</section>
 				<section>
@@ -414,6 +414,33 @@ grid-auto-rows: 500px;
 					</code></pre>
 					<a href="http://codepen.io/wiznia/pen/eZWaGO" target="_blank">View on CodePen</a>
 				</section>
+        <section>
+          <h2>The magic fr unit</h2>
+					<pre><code class="hljs" data-trim>
+.container {
+    display: grid;
+    grid-template-rows: 200px;
+    grid-template-columns: 1fr 2fr 100px;
+    grid-gap: 10px;
+    margin: auto;
+    max-width: 1000px;
+}
+					</code></pre>
+          <a href="https://codepen.io/wiznia/pen/VGMEGz" target="_blank">View on CodePen</a>
+        </section>
+        <section>
+          <h2>The repeat() function</h2>
+					<pre><code class="hljs" data-trim>
+.container {
+    display: grid;
+    grid-template-rows: 200px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    margin: auto;
+    max-width: 1000px;
+}
+					</code></pre>
+        </section>
 				<section>
 					<h2>Nested Grids</h2>
 					<h4>HTML:</h4>
@@ -800,6 +827,7 @@ http://codepen.io/wiznia/pen/XdZjPK
 				progress: true,
 				history: true,
 				center: true,
+        width: 1200,
 
 				transition: 'slide', // none/fade/slide/convex/concave/zoom
 
