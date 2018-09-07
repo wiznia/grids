@@ -434,12 +434,42 @@ grid-auto-rows: 500px;
 .container {
     display: grid;
     grid-template-rows: 200px;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(5, 1fr);
     grid-gap: 10px;
     margin: auto;
     max-width: 1000px;
 }
 					</code></pre>
+          <a href="https://codepen.io/wiznia/pen/OoxGXM" target="_blank">View on CodePen</a>
+        </section>
+        <section>
+          <h2>Grid auto-flow</h2>
+					<pre><code class="hljs" data-trim>
+.container {
+    display: grid;
+    grid-template-rows: 200px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-flow: dense;
+    grid-gap: 10px;
+    margin: auto;
+    max-width: 1000px;
+}
+					</code></pre>
+          <a href="https://codepen.io/wiznia/pen/XPeQjY" target="_blank">View on CodePen</a>
+        </section>
+        <section>
+          <h2>Auto-fit, auto-fill and the minmax() function</h2>
+					<pre><code class="hljs" data-trim>
+.container {
+    display: grid;
+    grid-template-rows: 200px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 10px;
+    margin: auto;
+    max-width: 1000px;
+}
+					</code></pre>
+          <a href="https://codepen.io/wiznia/pen/MqERZB" target="_blank">View on CodePen</a>
         </section>
 				<section>
 					<h2>Nested Grids</h2>
